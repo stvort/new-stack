@@ -2,6 +2,7 @@ package ru.otus.ctxlistenerdemo.busines;
 
 import org.springframework.stereotype.Component;
 import ru.otus.ctxlistenerdemo.api.OnStartup;
+import ru.otus.ctxlistenerdemo.api.OnStartup2;
 
 @Component
 public class AnyBusinessClass1 {
@@ -16,7 +17,7 @@ public class AnyBusinessClass1 {
         System.out.println("AnyBusinessClass1#anyBusinessMethod2");
     }
 
-    @OnStartup
+    @OnStartup2
     public void anyBusinessMethod3 (){
         System.out.println("AnyBusinessClass1#anyBusinessMethod3");
     }
