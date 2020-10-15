@@ -12,7 +12,6 @@ import org.springframework.stereotype.Component;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
@@ -53,7 +52,7 @@ public class BeanDefinitionHelper {
     }
 
     public List<BeanContext> getBeansContextList() {
-        Map<String, ? extends Class<?>> classMap = Arrays.stream(factory.getBeanDefinitionNames())
+        var classMap = Arrays.stream(factory.getBeanDefinitionNames())
                 .collect(Collectors.toMap(n -> n, n -> getClassForBeanDefinition(factory.getBeanDefinition(n))));
 
         return Arrays.stream(factory.getBeanDefinitionNames())
